@@ -1,0 +1,27 @@
+
+
+.banner {
+    background: url("/aset/bghero.png");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.banner h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Warna saat hover, misalnya biru Bootstrap */
+}
+
