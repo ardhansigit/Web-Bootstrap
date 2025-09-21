@@ -11,6 +11,64 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+#tentang ul li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+#tentang a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#tentang a:hover {
+  text-decoration: underline;
+}
+
+
+.carousel-item > a > div {
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    text-align: center; 
+}
+
+
+.cs-bg a div {
+    position: relative;
+}
+
+.cs-bg a img {
+    width: 30%; 
+    height: auto; 
+}
+
+
+.warthunder-bg a div {
+    position: relative;
+}
+
+.warthunder-bg a img {
+    width: 30%; 
+    height: auto; 
+}
+
+
+.komunitas-bg a div {
+   position: relative;
+}
+.komunitas-bg a img {
+    width: 30%; 
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-item img {
+        width: 100%; 
+        height: auto;
+    }
+}
+
 
 footer {
     text-align: center;
