@@ -11,6 +11,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+
 #tentang ul li {
   margin-bottom: 8px;
   color: #333;
@@ -23,6 +24,21 @@
 
 #tentang a:hover {
   text-decoration: underline;
+}
+
+
+
+
+@media (max-width: 768px) {
+ 
+  #tentang .row {
+  display: flex;
+  align-items: center;
+}
+
+#tentang .col-md-5 img {
+  border: 5px solid white;
+}
 }
 
 
