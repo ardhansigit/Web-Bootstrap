@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="bootstrap/css/style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -73,107 +74,116 @@
 
         </div>
     </section>
+
+
     <section id="tentang">
-         <div class="container">
-    <div class="row align-items-center">
-      <!-- Foto Profil -->
-      <div class="col-md-5 text-center mb-4 mb-md-0">
-        <img src="aset/bgprofil.png" alt="Foto Profil" style="max-height: 250px;">
-      </div>
+        <div class="container py-5">
+            <div class="row align-items-center">
 
-      <!-- Informasi -->
-      <div class="col-md-7">
-        <small class="text-uppercase text-muted fw-semibold"></small>
-        <h2 class="fw-bold">Tentang Saya</h2>
-        <p class="text-muted">Seorang yang suka bingung denga tujuan hidup, dan suka mencoba hal baru. Kadang ngoding, kadang main CS, kadang kiding</p>
-        <ul class="list-unstyled">
-          <li><strong>Nama:</strong> Sigit Arya Ardhana</li>
-          <li><strong>Tanggal Lahir:</strong> Juni 11, 2001</li>
-          <li><strong>Alamat:</strong> Gubug, Indonesia</li>
-          <li><strong>Kode Pos:</strong> Lupa</li>
-          <li><strong>Email:</strong> <a href="mailto:ardhan.sigit@gmail.com"> ardhan.sigit@gmail.com </a></li>
-          <li><strong>Telepon:</strong> +62-Lupa</li>
-        </ul>
-      
-        
-        <div class="d-flex gap-3 mt-3">
-          <div class="text-center">
-            <i class="bi bi-music-note-beamed fs-3 text-secondary"></i><br><small>Musik</small>
-          </div>
-          <div class="text-center">
-            <i class="bi bi-geo-alt fs-3 text-secondary"></i><br><small>Travel</small>
-          </div>
-          <div class="text-center">
-            <i class="bi bi-film fs-3 text-secondary"></i><br><small>Movie</small>
-          </div>
-          <div class="text-center">
-            <i class="bi bi-tools fs-3 text-secondary"></i><br><small>Tinkering</small>
-          </div>
-          <div class="text-center">
-            <i class="bi bi-controller fs-3 text-secondary"></i><br><small>Game</small>
-          </div>
+                <div class="col-lg-3 text-center mb-4 mb-lg-0">
+                    <img src="aset/bgprofil.png" alt="Foto Profil" class="img-fluid "
+                        style="max-height: 250px;">
+                </div>
+
+                <div class="col-lg-5 text-center text-lg-start mb-4 mb-lg-0">
+                    <h2 class="fw-bold">Tentang Saya</h2>
+                    <p class="text-muted">Seorang yang suka bingung dengan tujuan hidup, dan suka mencoba hal baru.
+                        Kadang ngoding, kadang main CS, kadang kiding</p>
+                    <ul class="list-unstyled text-start mx-auto mx-lg-0" style="max-width: 400px;">
+                        <li><strong>Nama:</strong> Sigit Arya Ardhana</li>
+                        <li><strong>Tanggal Lahir:</strong> Juni 11, 2001</li>
+                        <li><strong>Alamat:</strong> Gubug, Indonesia</li>
+                        <li><strong>Kode Pos:</strong> Lupa</li>
+                        <li><strong>Email:</strong> <a href="mailto:ardhan.sigit@gmail.com">ardhan.sigit@gmail.com</a>
+                        </li>
+                        <li><strong>Telepon:</strong> +62-Lupa</li>
+                    </ul>
+                    <div class="d-flex gap-3 mt-3 justify-content-center justify-content-lg-start">
+                        <div class="text-center"><i
+                                class="bi bi-music-note-beamed fs-3 text-secondary"></i><br><small>Musik</small></div>
+                        <div class="text-center"><i
+                                class="bi bi-geo-alt fs-3 text-secondary"></i><br><small>Travel</small></div>
+                        <div class="text-center"><i class="bi bi-film fs-3 text-secondary"></i><br><small>Movie</small>
+                        </div>
+                        <div class="text-center"><i
+                                class="bi bi-tools fs-3 text-secondary"></i><br><small>Tinkering</small></div>
+                        <div class="text-center"><i
+                                class="bi bi-controller fs-3 text-secondary"></i><br><small>Game</small></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <h2 class="fw-bold text-center mb-4">Win Rate Per-Map</h2>
+                    <div class="card p-3 shadow-lg">
+                        <canvas id="wrChart"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-
     </section>
 
 
-   <section id="statistik" class="py-5 bg-dark text-white">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-5">Statistik Saya</h2>
-        <div id="statsCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <section id="statistik" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Statistik Saya</h2>
+            <div id="statsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active cs-bg">
+                        <a href="https://csstats.gg/player/76561198417068276" target="_blank"
+                            class="text-decoration-none text-white">
+                            <div class="d-flex justify-content-center align-items-center flex-column text-center p-5">
+                                <img src="aset/cs2v2.png" alt="Counter Strike" class="img-fluid">
+                                <h3 class="fw-bold">Counter Strike</h3>
+                                <p class="fs-5">Game yang paling ku nikmati dengan teman, hanya internet tidak mendukung
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item warthunder-bg">
+                        <a href="https://warthunder.com/en/community/userinfo/?nick=Tactical_Radio" target="_blank"
+                            class="text-decoration-none text-white">
+                            <div class="d-flex justify-content-center align-items-center flex-column text-center p-5">
+                                <img src="aset/wtv2.png" alt="War Thunder" class="img-fluid">
+                                <h3 class="fw-bold">War Thunder</h3>
+                                <p class="fs-5">Game ketika lagi ingin santai dan ketika internet busuk</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item komunitas-bg">
+                        <a href="https://example.com/komunitas" target="_blank" class="text-decoration-none text-white">
+                            <div class="d-flex justify-content-center align-items-center flex-column text-center p-5">
+                                <img src="aset/comingsoon.png" alt="Soon" class="img-fluid">
+                                <h3 class="fw-bold">Coming Soon</h3>
+                                <p class="fs-5">hemm...</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#statsCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#statsCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
-            <div class="carousel-inner">
-                <div class="carousel-item active cs-bg">
-                    <a href="https://csstats.gg/player/76561198417068276" target="_blank" class="text-decoration-none text-white">
-                        <div class="d-flex justify-content-center align-items-center flex-column text-center p-5">
-                            <img src="aset/cs2v2.png" alt="Counter Strike" class="img-fluid">
-                            <h3 class="fw-bold">Counter Strike</h3>
-                            <p class="fs-5">Game yang paling ku nikmati dengan teman, hanya internet tidak mendukung</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="carousel-item warthunder-bg">
-                    <a href="https://warthunder.com/en/community/userinfo/?nick=Tactical_Radio" target="_blank" class="text-decoration-none text-white">
-                        <div class="d-flex justify-content-center align-items-center flex-column text-center p-5">
-                            <img src="aset/wtv2.png" alt="War Thunder" class="img-fluid">
-                            <h3 class="fw-bold">War Thunder</h3>
-                            <p class="fs-5">Game ketika lagi ingin santai dan ketika internet busuk</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="carousel-item komunitas-bg">
-                    <a href="https://example.com/komunitas" target="_blank" class="text-decoration-none text-white">
-                        <div class="d-flex justify-content-center align-items-center flex-column text-center p-5">
-                            <img src="aset/comingsoon.png" alt="Soon" class="img-fluid">
-                            <h3 class="fw-bold">Coming Soon</h3>
-                            <p class="fs-5">hemm...</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#statsCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#statsCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -221,6 +231,65 @@
 
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const ctx = document.getElementById('wrChart').getContext('2d');
+        ctx.canvas.height = 300;
+        const wrChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'de_mirage', 'de_inferno', 'de_ancient', 'de_anubis',
+                    'de_vertigo', 'de_dust2', 'de_nuke', 'de_overpass', 'de_train'
+                ],
+                datasets: [{
+                    label: 'WR% (Win Rate)',
+                    data: [49, 51, 40, 38, 58, 47, 50, 72, 50],
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            callback: function (value) {
+                                return value + '%';
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Persentase WR%'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Map'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return context.parsed.y + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
 </body>
 
 </html>
