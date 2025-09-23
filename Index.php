@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="bootstrap/css/style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 
 </head>
 
@@ -50,8 +48,8 @@
         background: url('aset/bghero.png');
         background-position: center;
         background-size: cover;
-        min-height: 100vh;
-    ">
+        min-height: 100vh;">
+
         <div class=" container-fluid banner d-flex align-items-center">
             <div class="container d-flex justify-content-between align-items-center text-center text-white p-5">
 
@@ -74,8 +72,48 @@
 
 
     <section id="tentang">
-        <?php include 'tentang.php'; ?>
+        <div class="container py-5">
+            <div class="row align-items-center">
 
+                <div class="col-lg-3 text-center mb-4 mb-lg-0">
+                    <img src="aset/bgprofil.png" alt="Foto Profil" class="img-fluid " style="max-height: 250px;">
+                </div>
+
+                <div class="col-lg-5 text-center text-lg-start mb-4 mb-lg-0">
+                    <h2 class="fw-bold">Tentang Saya</h2>
+                    <p class="text-muted">Seorang yang suka bingung dengan tujuan hidup, dan suka mencoba hal baru.
+                        Kadang ngoding, kadang main CS, kadang kiding</p>
+                    <ul class="list-unstyled text-start mx-auto mx-lg-0" style="max-width: 400px;">
+                        <li><strong>Nama:</strong> Sigit Arya Ardhana</li>
+                        <li><strong>Tanggal Lahir:</strong> Juni 11, 2001</li>
+                        <li><strong>Alamat:</strong> Mirage</li>
+                        <li><strong>Kode Pos:</strong> Lupa</li>
+                        <li><strong>Email:</strong> <a href="mailto:ardhan.sigit@gmail.com">ardhan.sigit@gmail.com</a>
+                        </li>
+                        <li><strong>Telepon:</strong> +62-Lupa</li>
+                    </ul>
+                    <div class="d-flex gap-3 mt-3 justify-content-center justify-content-lg-start">
+                        <div class="text-center"><i
+                                class="bi bi-music-note-beamed fs-3 text-secondary"></i><br><small>Musik</small></div>
+                        <div class="text-center"><i
+                                class="bi bi-geo-alt fs-3 text-secondary"></i><br><small>Travel</small></div>
+                        <div class="text-center"><i class="bi bi-film fs-3 text-secondary"></i><br><small>Movie</small>
+                        </div>
+                        <div class="text-center"><i
+                                class="bi bi-tools fs-3 text-secondary"></i><br><small>Tinkering</small></div>
+                        <div class="text-center"><i
+                                class="bi bi-controller fs-3 text-secondary"></i><br><small>Game</small></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <h2 class="fw-bold text-center mb-4">Win Rate Per-Map</h2>
+                    <div class="card p-3 shadow-lg">
+                        <canvas id="wrChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -175,7 +213,7 @@
                             </svg>
                         </a>
                     </div>
-                    <form action="koneksi.php" method="post">
+                    <form action="pesan.php" method="post">
                         <div class="mb-3 text-start">
                             <label for="nama" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="nama" name="nama" required>
@@ -205,6 +243,7 @@
 
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         fetch('get_chart_data.php')
             .then(response => response.json())
