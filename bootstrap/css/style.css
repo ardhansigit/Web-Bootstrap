@@ -1,0 +1,120 @@
+section {
+    scroll-margin-top: 90px;
+}
+
+
+
+.banner {
+
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.banner h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+#tentang ul li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#tentang a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#tentang a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    #tentang .row {
+        display: flex;
+        align-items: center;
+    }
+
+    #tentang .col-md-5 img {
+        border: 5px solid white;
+    }
+}
+
+
+.carousel-item>a>div {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+
+.cs-bg a div {
+    position: relative;
+}
+
+.cs-bg a img {
+    width: 30%;
+    height: auto;
+}
+
+
+.warthunder-bg a div {
+    position: relative;
+}
+
+.warthunder-bg a img {
+    width: 30%;
+    height: auto;
+}
+
+
+.komunitas-bg a div {
+    position: relative;
+}
+
+.komunitas-bg a img {
+    width: 30%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+form .form-control {
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+form .form-label {
+  font-weight: 500;
+}
+
+form .btn-primary {
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+
+}
