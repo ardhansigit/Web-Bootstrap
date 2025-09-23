@@ -1,13 +1,6 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "stats";
+ <?php include 'koneksi.php'; 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+
 
 $sql = "SELECT map_name, win_rate FROM map";
 $result = $conn->query($sql);
